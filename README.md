@@ -1,8 +1,11 @@
 # KWD_BOT  
   
-KWD_BOT은 서버관리(구현 90%), 게임(구현 0%), 학생급식/시간표(구현 0%), 와 같은 기능이 있는 봇이다.  
+KWD_BOT은 서버관리(구현 92%), 게임(구현 0%), 학생급식/시간표(구현 0%), 와 같은 기능이 있는 봇이다.  
 ( KWD_BOT is a bot with functions such as server management, games, and student meals/timetables. )  
   
+# 이 프로그램은 TS로 개발 되었습니다
+~~사실 원래 JS였 읍읍~~
+
 ## 1.Install Node.js( 설치 방법 )  
 기본적인 준비물인 node.js를 다운받도록하자.  
 ( Let's download node.js, which is a basic preparation. )  
