@@ -5,6 +5,7 @@ import 'dotenv/config'
 
 const client = new DJS.Client({
     intents: [
+        Intents.FLAGS.GUILD_MEMBERS,
         Intents.FLAGS.GUILDS, 
         Intents.FLAGS.GUILD_MESSAGES,
     ],
@@ -20,6 +21,7 @@ client.on('ready', () => {
 
     new WOK(client, {
         commandsDir: path.join(__dirname, 'commands'),
+        featuresDir: path.join(__dirname, 'features'),
         typeScript: true,
         testServers: ['984956876313739305'],
         botOwners: ['898341269389074533'],
