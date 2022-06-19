@@ -1,4 +1,4 @@
-import DJS from 'discord.js'
+import DJS, { Message } from 'discord.js'
 import { MessageEmbed, ReactionUserManager, User } from "discord.js";
 import { ICommand } from "wokcommands";
 
@@ -6,17 +6,11 @@ export default {
     category: 'Configuration',
     description: '유저의 정보를 출력합니다.',
 
-    minArgs: 1,
-    maxArgs: 1,
-
-    expectedArgs: '<해당유저Id>',
-    expectedArgsTypes: ['USER'],
-
-    slash: false,
+    slash: 'both',
     testOnly: true,
     guildOnly: true,
 
-    callback: async ({ user, message, text }) => {
+    callback: async ({ user, message, text, interaction, channel }) => {
 
         const embed = new MessageEmbed({
             color: "BLUE",
@@ -38,9 +32,15 @@ export default {
             ].join('\n')
         });
 
-        const newMessage = await message.reply({
-            embeds: [embed]
-        })
+        if (!interaction) {
+            channel.send({
+                embeds: [embed]
+            })
+        }  
+
+        if (interaction) {
+            return embed
+        }
     }
 
 } as ICommand
