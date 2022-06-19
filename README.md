@@ -5,7 +5,9 @@
 ## Install
 
 ```sh
-npm install
+npm install discord.js
+npm install nodemon
+npm install dotenv
 ```
 
 ## Run tests
